@@ -16,8 +16,12 @@ Route::get('/', function () {
   return view('home.index', $data);
 });
 
-Route::get('about', ['as' => 'about.index', function(){
-  //
+Route::get('about', function(){
+  return view('about.index');
+});
+
+Route::get('about/create', ['as' => 'about.create', function(){
+  return view('about.create');
 }]);
 
 Route::get('posts', ['as' => 'posts.index', function(){
